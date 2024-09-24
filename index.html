@@ -2,35 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
+  <main>
+    <div class="preview-card">
+      <picture class="preview-card__image-content">
+        <source srcset="./images/image-product-mobile.jpg 680w" media="(max-width: 42em)">
+        <source srcset="./images/image-product-desktop.jpg 600w" media="(min-width: 42em)">
+        <img class="preview-card__image" src="./images/image-product-mobile.jpg" srcset="./images/image-product-mobile.jpg 680w, ./images/image-product-desktop.jpg 600w" alt="product image">
+      </picture>
+      <div class="preview-card__text-content">
+        <p class="preview-card__category">Perfume</p>
+        <h2 class="preview-card__title">Gabrielle Essence Eau De Parfum</h2>
+        <p class="preview-card__description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="preview-card__price-content">
+          <h3 class="preview-card__price">$149.99</h3>
+          <p class="preview-card__sub-price"><strike>$169.99</strike></p>
+        </div>
+        <div class="preview-card__button">
+          <img class="preview-card__button-icon" src="./images/icon-cart.svg" alt="..">
+          <p class="preview-card__button-text">Add to Cart</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/Adriverion">Adriverion</a>.
+  </footer>
 </body>
 </html>
